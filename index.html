@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEPARTMENT — Running Club & Athletic Co.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/src/style.css">
+</head>
+
+<body class="bg-[#0a0a0a] text-white font-body overflow-x-hidden grain">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-dept-black/90 backdrop-blur-md border-b border-white/10 transition-all duration-300"
+        id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center space-x-2 group cursor-pointer">
+                    <div
+                        class="w-10 h-10 bg-dept-accent flex items-center justify-center transform group-hover:rotate-12 transition-transform">
+                        <span class="font-display font-bold text-black text-xl">D</span>
+                    </div>
+                    <span class="font-display font-bold text-2xl tracking-tighter">DEPARTMENT</span>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#shop" class="text-sm font-medium hover:text-dept-accent transition-colors relative group">
+                        SHOP
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-dept-accent transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="#runs" class="text-sm font-medium hover:text-dept-accent transition-colors relative group">
+                        RUNS
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-dept-accent transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="#gallery"
+                        class="text-sm font-medium hover:text-dept-accent transition-colors relative group">
+                        GALLERY
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-dept-accent transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="#blog" class="text-sm font-medium hover:text-dept-accent transition-colors relative group">
+                        JOURNAL
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-dept-accent transition-all group-hover:w-full"></span>
+                    </a>
+                </div>
+
+                <div class="flex items-center space-x-6">
+                    <button class="hover:text-dept-accent transition-colors">
+                        <i data-lucide="search" class="w-5 h-5"></i>
+                    </button>
+                    <button class="relative hover:text-dept-accent transition-colors" onclick="toggleCart()">
+                        <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+                        <span
+                            class="absolute -top-2 -right-2 w-5 h-5 bg-dept-accent text-black text-xs font-bold rounded-full flex items-center justify-center"
+                            id="cart-count">0</span>
+                    </button>
+                    <button class="md:hidden" onclick="toggleMobileMenu()">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="fixed inset-0 bg-dept-black z-40 transform translate-x-full transition-transform duration-300 md:hidden"
+        id="mobile-menu">
+        <div class="flex flex-col items-center justify-center h-full space-y-8">
+            <a href="#shop" class="font-display text-3xl font-bold hover:text-dept-accent"
+                onclick="toggleMobileMenu()">SHOP</a>
+            <a href="#runs" class="font-display text-3xl font-bold hover:text-dept-accent"
+                onclick="toggleMobileMenu()">RUNS</a>
+            <a href="#gallery" class="font-display text-3xl font-bold hover:text-dept-accent"
+                onclick="toggleMobileMenu()">GALLERY</a>
+            <a href="#blog" class="font-display text-3xl font-bold hover:text-dept-accent"
+                onclick="toggleMobileMenu()">JOURNAL</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-dept-black/50 to-dept-black z-10"></div>
+            <video autoplay muted loop playsinline class="w-full h-full object-cover opacity-60">
+                <source
+                    src="/Images/Ekse%20hola%20😉.%20We%20more%20than%20just%20a%20run%20Club%20we%20a%20community%20join%20us%20this%20Saturday.%20Get%20ready%20to%20co.mp4"
+                    type="video/mp4">
+            </video>
+        </div>
+
+
+
+        <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div
+                class="inline-flex items-center space-x-2 mb-6 px-4 py-2 border border-white/20 rounded-full bg-white/5 backdrop-blur-sm animate-float">
+                <span class="w-2 h-2 bg-dept-accent rounded-full animate-pulse"></span>
+                <span class="text-xs font-medium tracking-widest uppercase">EST. 2023 — RUSTENBURG</span>
+            </div>
+
+            <h1 class="font-display font-bold text-6xl md:text-8xl lg:text-9xl leading-none mb-6 text-white"
+                style="text-shadow: 0 0 20px rgba(0,0,0,0.5)">
+                DEPARTMENT
+            </h1>
+            <p class="font-display text-2xl md:text-4xl text-white/80 mb-8 tracking-tight">
+                OF <span class="text-dept-accent italic">RUNNING</span>
+            </p>
+            <p class="max-w-2xl mx-auto text-lg text-white/60 mb-12 font-light">
+                An area of special expertise. Sports apparel and fitness experiences for the committed.
+                We don't just run—we move culture forward.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <button
+                    class="px-8 py-4 bg-dept-accent text-black font-display font-bold text-lg hover:bg-white transition-colors w-full sm:w-auto group">
+                    SHOP COLLECTION
+                    <i data-lucide="arrow-right"
+                        class="inline-block w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                </button>
+                <button
+                    class="px-8 py-4 border border-white/30 font-display font-bold text-lg hover:bg-white hover:text-black transition-all w-full sm:w-auto">
+                    JOIN THE CLUB
+                </button>
+            </div>
+        </div>
+
+        <!-- Marquee -->
+        <div class="absolute bottom-0 left-0 w-full bg-dept-accent text-black py-3 overflow-hidden z-30">
+            <div class="flex whitespace-nowrap animate-marquee">
+                <span class="font-display font-bold text-lg mx-4">NO DAYS OFF</span>
+                <span class="mx-4">•</span>
+                <span class="font-display font-bold text-lg mx-4">STREET RUNNERS</span>
+                <span class="mx-4">•</span>
+                <span class="font-display font-bold text-lg mx-4">RUSTENBURG FINEST</span>
+                <span class="mx-4">•</span>
+                <span class="font-display font-bold text-lg mx-4">PACE MAKERS</span>
+                <span class="mx-4">•</span>
+                <span class="font-display font-bold text-lg mx-4">NO DAYS OFF</span>
+                <span class="mx-4">•</span>
+                <span class="font-display font-bold text-lg mx-4">STREET RUNNERS</span>
+                <span class="mx-4">•</span>
+                <span class="font-display font-bold text-lg mx-4">RUSTENBURG FINEST</span>
+                <span class="mx-4">•</span>
+                <span class="font-display font-bold text-lg mx-4">PACE MAKERS</span>
+                <span class="mx-4">•</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Categories -->
+    <section class="py-20 bg-dept-gray">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="group relative h-96 overflow-hidden cursor-pointer">
+                    <img src="/Images/484927859_17846353932439227_3253365072448908853_n.jpg"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        alt="Apparel">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <h3 class="font-display text-3xl font-bold mb-2">APPAREL</h3>
+                        <p class="text-white/60 mb-4">Performance wear for every kilometer</p>
+                        <span
+                            class="inline-flex items-center text-dept-accent font-medium group-hover:translate-x-2 transition-transform">
+                            Explore <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="group relative h-96 overflow-hidden cursor-pointer">
+                    <img src="/Images/485061490_17846188410439227_6181043728994487496_n.jpg"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        alt="Accessories">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <h3 class="font-display text-3xl font-bold mb-2">GEAR</h3>
+                        <p class="text-white/60 mb-4">Caps, bottles, essentials</p>
+                        <span
+                            class="inline-flex items-center text-dept-accent font-medium group-hover:translate-x-2 transition-transform">
+                            Explore <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="group relative h-96 overflow-hidden cursor-pointer">
+                    <img src="/Images/485524946_17846124225439227_2093959829057145474_n.jpg"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        alt="Experiences">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <h3 class="font-display text-3xl font-bold mb-2">EXPERIENCES</h3>
+                        <p class="text-white/60 mb-4">Group runs & training sessions</p>
+                        <span
+                            class="inline-flex items-center text-dept-accent font-medium group-hover:translate-x-2 transition-transform">
+                            Explore <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop Section -->
+    <section id="shop" class="py-24 bg-dept-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 gap-4">
+                <div>
+                    <h2 class="font-display text-5xl font-bold mb-2">THE <span
+                            class="text-stroke text-white">SHOP</span></h2>
+                    <p class="text-white/60">Curated essentials for the dedicated runner</p>
+                </div>
+
+                <div class="flex flex-wrap gap-2">
+                    <button
+                        class="filter-btn active px-4 py-2 border border-white/20 rounded-full text-sm hover:bg-white hover:text-black transition-all"
+                        data-filter="all">All</button>
+                    <button
+                        class="filter-btn px-4 py-2 border border-white/20 rounded-full text-sm hover:bg-white hover:text-black transition-all"
+                        data-filter="apparel">Apparel</button>
+                    <button
+                        class="filter-btn px-4 py-2 border border-white/20 rounded-full text-sm hover:bg-white hover:text-black transition-all"
+                        data-filter="accessories">Accessories</button>
+                    <button
+                        class="filter-btn px-4 py-2 border border-white/20 rounded-full text-sm hover:bg-white hover:text-black transition-all"
+                        data-filter="services">Services</button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="product-grid">
+                <!-- Products will be injected here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming Runs -->
+    <!-- Upcoming Runs -->
+    <section id="runs" class="py-32 bg-dept-accent text-black clip-slant">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-16 gap-8">
+                <div class="text-center md:text-left">
+                    <h2 class="font-display text-6xl md:text-7xl font-bold mb-4 tracking-tighter">UPCOMING <span
+                            class="bg-black text-white px-3 rotate-1 inline-block">SCHEDULE</span></h2>
+                    <p class="text-black/80 font-medium text-lg max-w-lg">Join the collective. We move as one, across
+                        all terrains and distances. RSVP to reserve your place in the pack.</p>
+                </div>
+                <div class="flex gap-4">
+                    <button
+                        class="px-8 py-4 bg-black text-white font-display font-bold hover:bg-white hover:text-black transition-all flex items-center gap-2">
+                        <i data-lucide="calendar" class="w-5 h-5"></i>
+                        VIEW FULL CALENDAR
+                    </button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 gap-4" id="runs-list">
+                <!-- Runs injected via JS -->
+            </div>
+
+            <div class="mt-16 text-center border-t border-black/10 pt-12">
+                <p class="font-display font-bold text-xl mb-6 italic uppercase tracking-tighter">We are more than just a
+                    run club—we are a community.</p>
+                <div
+                    class="flex justify-center flex-wrap gap-8 opacity-60 grayscale hover:grayscale-0 transition-all font-display font-bold text-sm tracking-widest">
+                    <span>RUSTENBURG</span>
+                    <span class="underline decoration-2 underline-offset-4">NIKE</span>
+                    <span>UNDER ARMOUR</span>
+                    <span>STREET RUNNERS</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-24 bg-dept-black overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+            <h2 class="font-display text-5xl font-bold mb-4">RUNNER'S <span class="text-dept-accent">EYE</span></h2>
+            <p class="text-white/60 max-w-xl">Moments captured on the move. Tag @departmentrunning to be featured.</p>
+        </div>
+
+        <div class="relative">
+            <div class="flex space-x-4 overflow-x-auto hide-scrollbar px-4 pb-8" id="gallery-scroll">
+                <!-- Gallery items using local images -->
+                <div class="flex-none w-80 h-96 relative group cursor-pointer overflow-hidden">
+                    <img src="/Images/485587834_17846789292439227_5639093758944264302_n.jpg"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        alt="Gallery 1">
+                    <div
+                        class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
+                        <i data-lucide="instagram" class="w-8 h-8 text-white"></i>
+                    </div>
+                </div>
+                <div class="flex-none w-64 h-96 relative group cursor-pointer overflow-hidden">
+                    <img src="/Images/486056692_17847162123439227_905365303298084521_n.jpg"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        alt="Gallery 2">
+                    <div
+                        class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
+                        <i data-lucide="instagram" class="w-8 h-8 text-white"></i>
+                    </div>
+                </div>
+                <div class="flex-none w-96 h-96 relative group cursor-pointer overflow-hidden">
+                    <img src="/Images/486672733_17847812622439227_4128298656950125247_n.jpg"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        alt="Gallery 3">
+                    <div
+                        class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
+                        <i data-lucide="instagram" class="w-8 h-8 text-white"></i>
+                    </div>
+                </div>
+                <div class="flex-none w-72 h-96 relative group cursor-pointer overflow-hidden">
+                    <img src="/Images/486685896_17848034040439227_1229019750932012274_n.jpg"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        alt="Gallery 4">
+                    <div
+                        class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
+                        <i data-lucide="instagram" class="w-8 h-8 text-white"></i>
+                    </div>
+                </div>
+                <div class="flex-none w-80 h-96 relative group cursor-pointer overflow-hidden">
+                    <img src="/Images/487927071_17848818411439227_8100588611956566352_n.jpg"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        alt="Gallery 5">
+                    <div
+                        class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
+                        <i data-lucide="instagram" class="w-8 h-8 text-white"></i>
+                    </div>
+                </div>
+            </div>
+
+            <button
+                class="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center hover:bg-white hover:text-black transition-all"
+                onclick="scrollGallery(-1)">
+                <i data-lucide="chevron-left" class="w-6 h-6"></i>
+            </button>
+            <button
+                class="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center hover:bg-white hover:text-black transition-all"
+                onclick="scrollGallery(1)">
+                <i data-lucide="chevron-right" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- Blog/Journal Section -->
+    <section id="blog" class="py-24 bg-dept-gray clip-slant-reverse">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-12">
+                <div>
+                    <h2 class="font-display text-5xl font-bold mb-2">THE <span class="text-dept-accent">JOURNAL</span>
+                    </h2>
+                    <p class="text-white/60">Stories from the road</p>
+                </div>
+                <a href="#"
+                    class="mt-4 md:mt-0 inline-flex items-center text-white/80 hover:text-dept-accent transition-colors">
+                    View all articles <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <article class="group cursor-pointer">
+                    <div class="relative h-64 mb-4 overflow-hidden">
+                        <img src="/Images/488370370_17849220840439227_570943731729778600_n.jpg"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            alt="Blog 1">
+                        <div class="absolute top-4 left-4 px-3 py-1 bg-dept-accent text-black text-xs font-bold">
+                            TRAINING</div>
+                    </div>
+                    <div class="text-white/40 text-sm mb-2">Feb 15, 2026</div>
+                    <h3 class="font-display text-xl font-bold mb-2 group-hover:text-dept-accent transition-colors">The
+                        Art of the Long Run: Building Mental Toughness</h3>
+                    <p class="text-white/60 text-sm line-clamp-2">Why every runner needs to embrace the discomfort of
+                        distance running and how it translates to everyday life.</p>
+                </article>
+
+                <article class="group cursor-pointer">
+                    <div class="relative h-64 mb-4 overflow-hidden">
+                        <img src="/Images/490102274_17850106719439227_9080262158431475624_n.jpg"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            alt="Blog 2">
+                        <div class="absolute top-4 left-4 px-3 py-1 bg-dept-accent text-black text-xs font-bold">
+                            COMMUNITY</div>
+                    </div>
+                    <div class="text-white/40 text-sm mb-2">Feb 10, 2026</div>
+                    <h3 class="font-display text-xl font-bold mb-2 group-hover:text-dept-accent transition-colors">
+                        Street Runners: How Running Culture is Changing Rustenburg</h3>
+                    <p class="text-white/60 text-sm line-clamp-2">From solo miles to group dynamics, the running
+                        movement is taking over the streets of North West.</p>
+                </article>
+
+                <article class="group cursor-pointer">
+                    <div class="relative h-64 mb-4 overflow-hidden">
+                        <img src="/Images/490440654_1635846610434749_5970342334325136862_n.jpg"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            alt="Blog 3">
+                        <div class="absolute top-4 left-4 px-3 py-1 bg-dept-accent text-black text-xs font-bold">GEAR
+                        </div>
+                    </div>
+                    <div class="text-white/40 text-sm mb-2">Feb 5, 2026</div>
+                    <h3 class="font-display text-xl font-bold mb-2 group-hover:text-dept-accent transition-colors">
+                        Summer Training Essentials: What to Wear When It's Hot</h3>
+                    <p class="text-white/60 text-sm line-clamp-2">Breathable fabrics, hydration packs, and the gear that
+                        keeps you cool when the pavement is melting.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-24 bg-dept-black relative overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute inset-0"
+                style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 40px 40px;">
+            </div>
+        </div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <h2 class="font-display text-4xl md:text-6xl font-bold mb-6 text-white">JOIN THE <span
+                    class="text-dept-accent">MOVEMENT</span></h2>
+            <p class="text-white/60 mb-8 text-lg">Get early access to drops, run schedules, and exclusive content.</p>
+            <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto" onsubmit="handleSubscribe(event)">
+                <input type="email" placeholder="Enter your email"
+                    class="flex-1 px-6 py-4 bg-white/5 border border-white/20 rounded-none focus:outline-none focus:border-dept-accent text-white placeholder-white/40"
+                    required>
+                <button type="submit"
+                    class="px-8 py-4 bg-dept-accent text-black font-display font-bold hover:bg-white transition-colors">
+                    SUBSCRIBE
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dept-gray border-t border-white/10 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center space-x-2 mb-6">
+                        <div class="w-8 h-8 bg-dept-accent flex items-center justify-center">
+                            <span class="font-display font-bold text-black">D</span>
+                        </div>
+                        <span class="font-display font-bold text-xl uppercase tracking-tighter">DEPARTMENT</span>
+                    </div>
+                    <p class="text-white/60 mb-6 max-w-sm">An area of special expertise. Sports apparel and fitness
+                        experiences for the committed runner. Based in Rustenburg, serving the culture.</p>
+                    <div class="flex space-x-4">
+                        <a href="#"
+                            class="w-10 h-10 border border-white/20 flex items-center justify-center hover:bg-dept-accent hover:border-dept-accent hover:text-black transition-all">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 border border-white/20 flex items-center justify-center hover:bg-dept-accent hover:border-dept-accent hover:text-black transition-all">
+                            <i data-lucide="twitter" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 border border-white/20 flex items-center justify-center hover:bg-dept-accent hover:border-dept-accent hover:text-black transition-all">
+                            <i data-lucide="youtube" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 border border-white/20 flex items-center justify-center hover:bg-dept-accent hover:border-dept-accent hover:text-black transition-all">
+                            <i data-lucide="music" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-display font-bold mb-4 uppercase">Shop</h4>
+                    <ul class="space-y-2 text-white/60">
+                        <li><a href="#" class="hover:text-dept-accent transition-colors">All Products</a></li>
+                        <li><a href="#" class="hover:text-dept-accent transition-colors">Apparel</a></li>
+                        <li><a href="#" class="hover:text-dept-accent transition-colors">Accessories</a></li>
+                        <li><a href="#" class="hover:text-dept-accent transition-colors">Gift Cards</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-display font-bold mb-4 uppercase">Club</h4>
+                    <ul class="space-y-2 text-white/60">
+                        <li><a href="#" class="hover:text-dept-accent transition-colors">Run Schedule</a></li>
+                        <li><a href="#" class="hover:text-dept-accent transition-colors">Membership</a></li>
+                        <li><a href="#" class="hover:text-dept-accent transition-colors">Coaching</a></li>
+                        <li><a href="#" class="hover:text-dept-accent transition-colors">Events</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-white/40 text-sm">© 2026 DEPARTMENT Running Club. All rights reserved.</p>
+                <div class="flex space-x-6 text-sm text-white/40">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                    <a href="#" class="hover:text-white transition-colors">Shipping Info</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Drawer -->
+    <div class="fixed inset-0 z-[60] pointer-events-none" id="cart-overlay">
+        <div class="absolute inset-0 bg-black/60 opacity-0 transition-opacity duration-300" onclick="toggleCart()">
+        </div>
+        <div class="absolute right-0 top-0 h-full w-full max-w-md bg-dept-gray transform translate-x-full transition-transform duration-300 pointer-events-auto flex flex-col"
+            id="cart-drawer">
+            <div class="p-6 border-b border-white/10 flex justify-between items-center">
+                <h3 class="font-display text-2xl font-bold">YOUR CART</h3>
+                <button onclick="toggleCart()" class="hover:text-dept-accent transition-colors">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            <div class="flex-1 overflow-y-auto p-6" id="cart-items">
+                <p class="text-white/40 text-center py-12">Your cart is empty</p>
+            </div>
+            <div class="p-6 border-t border-white/10 bg-dept-black">
+                <div class="flex justify-between mb-4 font-display text-xl">
+                    <span>Total</span>
+                    <span id="cart-total">R 0.00</span>
+                </div>
+                <button
+                    class="w-full py-4 bg-dept-accent text-black font-display font-bold hover:bg-white transition-colors">
+                    CHECKOUT
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick View Modal -->
+    <div class="fixed inset-0 z-[70] hidden items-center justify-center p-4" id="quick-view-modal">
+        <div class="absolute inset-0 bg-black/80" onclick="closeQuickView()"></div>
+        <div class="relative bg-dept-gray max-w-4xl w-full max-h-[90vh] overflow-y-auto flex flex-col md:flex-row">
+            <button onclick="closeQuickView()"
+                class="absolute top-4 right-4 z-10 w-10 h-10 bg-black/50 flex items-center justify-center hover:bg-dept-accent hover:text-black transition-colors">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+            <div class="md:w-1/2 h-96 md:h-auto" id="modal-image-container">
+                <img id="modal-image" src="" class="w-full h-full object-cover" alt="">
+            </div>
+            <div class="md:w-1/2 p-8 flex flex-col justify-center">
+                <div class="text-dept-accent text-sm font-bold mb-2" id="modal-category"></div>
+                <h2 class="font-display text-3xl font-bold mb-4" id="modal-title"></h2>
+                <p class="text-white/60 mb-6" id="modal-description"></p>
+                <div class="font-display text-2xl font-bold mb-6" id="modal-price"></div>
+
+                <div class="mb-6" id="modal-options">
+                    <!-- Options injected here -->
+                </div>
+
+                <button onclick="addToCartFromModal()"
+                    class="w-full py-4 bg-dept-accent text-black font-display font-bold hover:bg-white transition-colors mb-4">
+                    ADD TO CART
+                </button>
+                <button
+                    class="w-full py-4 border border-white/30 font-display font-bold hover:bg-white hover:text-black transition-all">
+                    VIEW FULL DETAILS
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

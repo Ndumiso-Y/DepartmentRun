@@ -1,0 +1,106 @@
+/* Base Styles Layer */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --dept-black: #0a0a0a;
+    --dept-gray: #1a1a1a;
+    --dept-accent: #ff3d00;
+    --dept-cream: #f5f5f0;
+}
+
+body {
+    background-color: var(--dept-black);
+    color: white;
+    font-family: 'Inter', sans-serif;
+}
+
+.font-display {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Custom Utilities from user's provided code */
+.clip-slant {
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.clip-slant-reverse {
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+}
+
+.text-stroke {
+    -webkit-text-stroke: 1px currentColor;
+    -webkit-text-fill-color: transparent;
+}
+
+.hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.3);
+}
+
+/* Animations */
+@keyframes marquee {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes marquee-reverse {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.animate-marquee {
+    animation: marquee 25s linear infinite;
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+.grain::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.03;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
