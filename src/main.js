@@ -13,7 +13,7 @@ const products = [
         category: "apparel",
         price: 300.00,
         options: 4,
-        image: "/Images/6ng22dm98617d7v.jpeg", // Replacing Unsplash with local images where appropriate
+        image: "Images/6ng22dm98617d7v.jpeg", // Replacing Unsplash with local images where appropriate
         description: "Performance crop top with moisture-wicking fabric. Perfect for hot summer runs."
     },
     {
@@ -22,7 +22,7 @@ const products = [
         category: "services",
         price: 75.00,
         duration: "1 hr 20 mins",
-        image: "/Images/8s022bhnxqn14v3.jpeg",
+        image: "Images/8s022bhnxqn14v3.jpeg",
         description: "Weekly night running group. Safety lights provided. All paces welcome."
     },
     {
@@ -31,7 +31,7 @@ const products = [
         category: "apparel",
         price: 350.00,
         options: 5,
-        image: "/Images/l8q22bhmypkr86j.jpeg",
+        image: "Images/l8q22bhmypkr86j.jpeg",
         description: "The original DEPARTMENT running tee. Lightweight, breathable, iconic."
     },
     {
@@ -40,7 +40,7 @@ const products = [
         category: "apparel",
         price: 300.00,
         options: 8,
-        image: "/Images/pg522bh6qb1hj2d.jpeg",
+        image: "Images/pg522bh6qb1hj2d.jpeg",
         description: "Training shorts with phone pocket and reflective details."
     },
     {
@@ -49,7 +49,7 @@ const products = [
         category: "accessories",
         price: 90.00,
         options: 1,
-        image: "/Images/qhv224g14d90k3q.jpeg",
+        image: "Images/qhv224g14d90k3q.jpeg",
         description: "Moisture-wicking headwrap. Keeps sweat out of your eyes in style."
     },
     {
@@ -58,7 +58,7 @@ const products = [
         category: "apparel",
         price: 300.00,
         options: 8,
-        image: "/Images/wk6228kp7xbg8mt.jpeg",
+        image: "Images/wk6228kp7xbg8mt.jpeg",
         description: "Relaxed fit crop with dropped shoulders. Street to track ready."
     }
 ];
